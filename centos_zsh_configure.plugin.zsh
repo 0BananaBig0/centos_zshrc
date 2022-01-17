@@ -21,9 +21,6 @@ alias gvim='gvim -p'
 alias nvim='nvim -p'
 alias gnvim='~/Downloads/program/Goneovim-v0.5.1-linux/goneovim -p'
 
-# Set PDF
-alias pdf='~/Downloads/program/PDF-Studio-11/start &'
-
 
 
 # Set pip
