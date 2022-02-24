@@ -33,10 +33,11 @@ export GOPRIVATE=git.mycompany.com,github.com/my/private
 
 # Set Cargo
 export PATH=$PATH:~/.cargo/bin
+export PATH=$PATH:/home-local/celab106_z2mini/.cargo/bin
 
 
 #set cadtools
-# enviroment variables for EDA tools
+#enviroment variables for EDA tools
 export LM_LICENSE_FILE=/cadtools/Mentor/license.txt
 export TESSENT_TREE=/cadtools/Mentor/Tessent/tessent_tree_2019.2-snapshot
 #export MODELSIM_TREE=/cadtools/Mentor/ModelSim/2020.3/modelsim_dlx
@@ -55,5 +56,9 @@ alias  catapult='catapult &'
 
 
 
-# disable gui password prompt for git
+#disable gui password prompt for git
 unset SSH_ASKPASS
+
+
+#set git
+source /opt/rh/rh-git227/enable
