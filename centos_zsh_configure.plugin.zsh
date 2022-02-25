@@ -66,3 +66,4 @@ unset SSH_ASKPASS
 if [ -f "/opt/rh/rh-git227/enable" ]; then
   source /opt/rh/rh-git227/enable
 fi
+
