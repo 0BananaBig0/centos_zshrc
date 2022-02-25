@@ -32,8 +32,10 @@ export GOPRIVATE=git.mycompany.com,github.com/my/private
 
 
 # Set Cargo
+if [ -f "/home-local/celab106_z2mini/.cargo/bin" ]; then
+  export PATH=$PATH:/home-local/celab106_z2mini/.cargo/bin
+fi
 export PATH=$PATH:~/.cargo/bin
-export PATH=$PATH:/home-local/celab106_z2mini/.cargo/bin
 
 
 #set cadtools
