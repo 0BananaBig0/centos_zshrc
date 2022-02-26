@@ -67,3 +67,8 @@ if [ -f "/opt/rh/rh-git227/enable" ]; then
   source /opt/rh/rh-git227/enable
 fi
 
+
+
+#set vi-mode of terminal
+VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
+MODE_INDICATOR="%F{white}<<<%f"
