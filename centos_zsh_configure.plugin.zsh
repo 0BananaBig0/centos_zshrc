@@ -67,3 +67,17 @@ unset SSH_ASKPASS
 VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
 MODE_INDICATOR="%F{white}<<<%f"
 
+
+
+#set git version
+if [ -f "/opt/rh/rh-git227/enable" ]; then
+  source /opt/rh/rh-git227/enable
+fi
+
+
+
+#set gcc/g++ version
+if [ -f "/opt/rh/devtoolset-9/enable" ]; then
+  source /opt/rh/devtoolset-9/enable #or scl enable devtoolset-9 bash #only for .bashrc 
+fi
+
