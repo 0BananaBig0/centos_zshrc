@@ -38,6 +38,13 @@ fi
 export PATH=$PATH:~/.cargo/bin
 
 
+
+# Set exa
+if [ -x $HOME"/.cargo/bin/exa" ] || [ -x "/home-local/celab106_z2mini/.cargo/bin/exa" ]; then
+  alias 'ls'='exa'
+fi
+
+
 #set cadtools
 #enviroment variables for EDA tools
 export LM_LICENSE_FILE=/cadtools/Mentor/license.txt
