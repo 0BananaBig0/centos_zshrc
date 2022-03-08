@@ -78,3 +78,6 @@ MODE_INDICATOR="%F{white}<<<%f"
 
 #add local bin of normal user.
 export PATH=$PATH:$HOME/.local/bin
+
+
+
