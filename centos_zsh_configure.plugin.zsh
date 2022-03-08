@@ -74,3 +74,7 @@ unset SSH_ASKPASS
 VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
 MODE_INDICATOR="%F{white}<<<%f"
 
+
+
+#add local bin of normal user.
+export PATH=$PATH:$HOME/.local/bin
