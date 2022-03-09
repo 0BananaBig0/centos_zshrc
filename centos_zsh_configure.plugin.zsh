@@ -62,6 +62,8 @@ export PATH=$PATH:$TESSENT_TREE/bin:$CATAPULT_TREE/bin
 export PATH=$PATH:$QUESTASIM_TREE/bin
 export PATH=$PATH:$OASYS_TREE/bin
 export PATH=$PATH:$PRECISION_TREE/bin
+#make mentor tools work on 64bits model
+export MTI_VCO_MODE=64
 alias  catapult='catapult &'
 
 
@@ -79,5 +81,3 @@ MODE_INDICATOR="%F{white}<<<%f"
 
 #add local bin of normal user.
 export PATH=$PATH:$HOME/.local/bin
-
-
