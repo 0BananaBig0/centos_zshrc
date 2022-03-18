@@ -33,17 +33,11 @@ export GOPROXY=https://goproxy.io,direct
 
 
 # Set Cargo
-if [ -f "/home-local/celab106_z2mini/.cargo/bin" ]; then
+if [ -d "/home-local/celab106_z2mini/.cargo/bin" ]; then
   export PATH=$PATH:/home-local/celab106_z2mini/.cargo/bin
 fi
 export PATH=$PATH:~/.cargo/bin
 
-
-
-# # Set exa
-# if [ -x $HOME"/.cargo/bin/exa" ] || [ -x "/home-local/celab106_z2mini/.cargo/bin/exa" ]; then
-#   alias 'ls'='exa'
-# fi
 
 
 #set cadtools
@@ -81,3 +75,5 @@ MODE_INDICATOR="%F{white}<<<%f"
 
 #add local bin of normal user.
 export PATH=$PATH:$HOME/.local/bin
+
+
