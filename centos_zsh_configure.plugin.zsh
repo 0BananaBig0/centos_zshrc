@@ -76,4 +76,8 @@ MODE_INDICATOR="%F{white}<<<%f"
 #add local bin of normal user.
 export PATH=$PATH:$HOME/.local/bin
 
+#add new dynamic library
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+
+
 
