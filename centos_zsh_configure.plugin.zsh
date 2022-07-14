@@ -31,14 +31,17 @@ export GO111MODULE=on
 export GOPROXY=https://goproxy.io,direct
 # Set environment variable allow bypassing the proxy for specified repos (optional)
 # export GOPRIVATE=git.mycompany.com,github.com/my/private
+if [ -d "/home-local/celab106_z2mini/.go/bin" ]; then
+  export PATH=$PATH:/home-local/celab106_z2mini/.go/bin
+fi
 
 
 
 # Set Cargo
+export PATH=$PATH:~/.cargo/bin
 if [ -d "/home-local/celab106_z2mini/.cargo/bin" ]; then
   export PATH=$PATH:/home-local/celab106_z2mini/.cargo/bin
 fi
-export PATH=$PATH:~/.cargo/bin
 
 
 
