@@ -42,6 +42,7 @@ export PATH=$PATH:~/.cargo/bin
 if [ -d "/home-local/celab106_z2mini/.cargo/bin" ]; then
   export PATH=$PATH:/home-local/celab106_z2mini/.cargo/bin
 fi
+eval "$(zoxide init zsh)"
 
 
 
@@ -83,6 +84,3 @@ export PATH=$PATH:$HOME/.local/bin
 
 #add new dynamic library
 LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
-
-
-
