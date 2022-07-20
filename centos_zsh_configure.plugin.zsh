@@ -42,7 +42,9 @@ export PATH=$PATH:~/.cargo/bin
 if [ -d "/home-local/celab106_z2mini/.cargo/bin" ]; then
   export PATH=$PATH:/home-local/celab106_z2mini/.cargo/bin
 fi
-eval "$(zoxide init zsh)"
+if command -v zoxide >/dev/null 2>&1;then
+  eval "$(zoxide init zsh)"
+fi
 
 
 
@@ -82,5 +84,12 @@ MODE_INDICATOR="%F{white}<<<%f"
 #add local bin of normal user.
 export PATH=$PATH:$HOME/.local/bin
 
-#add new dynamic library
+
+
+# add env
 LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+PATH=$PATH:$HOME/.local/bin
+if [ `whoami` = "root" ];then
+  export PATH="$PATH:/home-local/celab106_z2mini/.local/bin"
+fi
+
