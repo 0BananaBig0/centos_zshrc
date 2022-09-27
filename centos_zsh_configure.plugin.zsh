@@ -57,6 +57,7 @@ export QUESTASIM_TREE=/cadtools/Mentor/QuestaSim/2020.3
 export CATAPULT_TREE=/cadtools/Mentor/Catapult/r10.5b-886011/Mgc_home
 #export OASYS_TREE=/cadtools/Mentor/Oasys-rtl/2019.1.R1/Oasys-RTL-2019.1.R1
 export OASYS_TREE=/cadtools/Mentor/Oasys-rtl/2021.1.R1/Oasys-RTL-2021.1.R1
+export HDS_TREE=/cadtools/Mentor/HDS/2022.3
 alias 'oasys2019'='/cadtools/Mentor/Oasys-rtl/2019.1.R1/Oasys-RTL-2019.1.R1/bin/oasys'
 #alias 'oasys2021'='/cadtools/Mentor/Oasys-rtl/2021.1.R1/Oasys-RTL-2021.1.R1/bin/oasys'
 export PRECISION_TREE=/cadtools/Mentor/Precision/Mgc_home
@@ -64,9 +65,9 @@ export PATH=$PATH:$TESSENT_TREE/bin:$CATAPULT_TREE/bin
 export PATH=$PATH:$QUESTASIM_TREE/bin
 export PATH=$PATH:$OASYS_TREE/bin
 export PATH=$PATH:$PRECISION_TREE/bin
+export PATH=$PATH:$HDS_TREE/bin
 #make mentor tools work on 64bits model
 export MTI_VCO_MODE=64
-alias  catapult='catapult &'
 
 
 
