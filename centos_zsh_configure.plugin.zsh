@@ -31,15 +31,17 @@ export GO111MODULE=on
 export GOPROXY=https://goproxy.io,direct
 # Set environment variable allow bypassing the proxy for specified repos (optional)
 # export GOPRIVATE=git.mycompany.com,github.com/my/private
-if [ -d "/home-local/celab106_z2mini/.local/.go/bin" ]; then
+if [ -s "/home-local/celab106_z2mini/.local/.go" ]; then
   export PATH=$PATH:/home-local/celab106_z2mini/.local/.go/bin
 fi
 
 
 
 # Set Cargo
-export PATH=$PATH:~/.cargo/bin
-if [ -d "/home-local/celab106_z2mini/.cargo/bin" ]; then
+if [ -s "~/.cargo" ]; then
+  export PATH=$PATH:~/.cargo/bin
+fi
+if [ -s "/home-local/celab106_z2mini/.cargo" ]; then
   export PATH=$PATH:/home-local/celab106_z2mini/.cargo/bin
 fi
 if command -v zoxide >/dev/null 2>&1;then
@@ -82,15 +84,20 @@ MODE_INDICATOR="%F{white}<<<%f"
 
 
 
-#add local bin of normal user.
-export PATH=$PATH:$HOME/.local/bin
-
-
-
 # add env
 LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
-PATH=$PATH:$HOME/.local/bin
-if [ `whoami` = "root" ];then
-  export PATH="$PATH:/home-local/celab106_z2mini/.local/bin"
+if [ -s "~/.local" ]; then
+  #add local bin of normal user.
+  PATH=$PATH:~/.local/bin
+  #add new dynamic library
+  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/.local/lib
+  #add man information
+  export XDG_DATA_DIRS=$XDG_DATA_DIRS:~/.local/share
 fi
-
+if [ `whoami` = "root" ];then
+  if [ -s "/home-local/celab106_z2mini/.local" ];then
+    export PATH="$PATH:/home-local/celab106_z2mini/.local/bin"
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home-local/celab106_z2mini/.local/lib
+    export XDG_DATA_DIRS=$XDG_DATA_DIRS:/home-local/celab106_z2mini/.local/share
+  fi
+fi
