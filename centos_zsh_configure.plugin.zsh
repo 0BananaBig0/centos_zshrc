@@ -85,10 +85,11 @@ MODE_INDICATOR="%F{white}<<<%f"
 
 
 # add env
-LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+export XDG_DATA_DIRS=$XDG_DATA_DIRS:/usr/local/share
 if [ -s "~/.local" ]; then
   #add local bin of normal user.
-  PATH=$PATH:~/.local/bin
+  export PATH=$PATH:~/.local/bin
   #add new dynamic library
   export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/.local/lib
   #add man information
