@@ -53,7 +53,11 @@ fi
 #set cadtools
 #enviroment variables for EDA tools
 export LM_LICENSE_FILE=/cadtools/Mentor/license.txt
-export TESSENT_TREE=/cadtools/Mentor/Tessent/tessent_tree_2019.2-snapshot
+#export TESSENT_TREE=/cadtools/Mentor/Tessent/tessent_tree_2015.4
+#export TESSENT_TREE=/cadtools/Mentor/Tessent/tessent_tree_2018.3
+#export TESSENT_TREE=/cadtools/Mentor/Tessent/tessent_tree_2019.2-snapshot
+#export TESSENT_TREE=/cadtools/Mentor/Tessent/tessent_tree_2020.4
+export TESSENT_TREE=/cadtools/Mentor/Tessent/tessent_tree_2022.2
 #export MODELSIM_TREE=/cadtools/Mentor/ModelSim/2020.3/modelsim_dlx
 export QUESTASIM_TREE=/cadtools/Mentor/QuestaSim/2020.3
 export CATAPULT_TREE=/cadtools/Mentor/Catapult/r10.5b-886011/Mgc_home
@@ -102,5 +106,4 @@ if [ `whoami` == "root" ];then
     export XDG_DATA_DIRS=$XDG_DATA_DIRS:/home-local/celab106_z2mini/.local/share
   fi
 fi
-
 
