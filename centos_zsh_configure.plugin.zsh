@@ -107,3 +107,13 @@ if [ `whoami` == "root" ];then
   fi
 fi
 
+
+
+# Set vim9
+if [ -s "/cadtools/optional_program/vim9" ]; then
+  #add local bin of normal user.
+  export PATH=/cadtools/optional_program/vim9/bin:$PATH
+  #add man information
+  export XDG_DATA_DIRS=/cadtools/optional_program/vim9/share:$XDG_DATA_DIRS
+fi
+
